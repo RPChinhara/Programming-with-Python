@@ -21,7 +21,7 @@ def findPalindromicSubstrings(s):
         expand(s, i, i + 1, palindromes)
  
     # print all unique palindromic substrings
-    print(palindromes, end='')
+    print(palindromes)
  
 s = 'ozovogzorozghi'
 findPalindromicSubstrings(s)
