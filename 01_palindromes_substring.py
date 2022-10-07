@@ -2,9 +2,7 @@ def expand(s, low, high, palindromes):
     # expand in both directions to find palindrome
     while low >= 0 and high < len(s) and s[low] == s[high]:
         # push all palindromes into a set
-        # only add substrings that have greater than one letter
-        if low != high:
-            palindromes.add(s[low: high + 1])
+        palindromes.add(s[low: high + 1])
         # Expand in both directions
         low = low - 1
         high = high + 1
