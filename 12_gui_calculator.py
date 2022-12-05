@@ -2,7 +2,7 @@
 # calculator using Tkinter
 
 # import everything from tkinter module
-from tkinter import *
+from tkinter import * # type: ignore
 
 # globally declare the expression variable
 expression = ""
