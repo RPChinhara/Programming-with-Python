@@ -6,22 +6,21 @@ def expand(s, low, high, palindromes):
         # Expand in both directions
         low = low - 1
         high = high + 1
- 
- 
+
 # Function to find all unique palindromic substrings of a given string
 def findPalindromicSubstrings(s):
     # create an empty set to store all unique palindromic substrings
     # a set can only store distinct values
     palindromes = set()
- 
+
     for i in range(len(s)):
         # find all odd length palindrome with `s[i]` as a midpoint
         expand(s, i, i, palindromes)
         # find all even length palindrome with `s[i]` and `s[i+1]` as its midpoints
         expand(s, i, i + 1, palindromes)
- 
+
     # print all unique palindromic substrings
     print(palindromes)
- 
+
 s = 'ozovogzorozghi'
 findPalindromicSubstrings(s)
